@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAREERLAB — онлайн платформа обучения</title>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Raleway', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2F5D8C',  // кнопки, ссылки, акценты
+                        primaryDark: '#264566',  // hover / затемнения
+
+                        light: '#F4F7FB',  // фон секций
+
+                        textMain: '#182739',  // ЗАГОЛОВКИ
+                        graySoft: '#264566',  // ПОДЗАГОЛОВКИ + ОБЫЧНЫЙ ТЕКСТ
+
+                        borderSoft: '#DADFE6',  // бордеры
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<!-- Scroll to top -->
+<button id="scrollToTop" aria-label="Наверх" class="fixed bottom-6 right-6 z-50
+         w-12 h-12 rounded-full
+         bg-primaryDark
+         flex items-center justify-center
+         text-white
+         shadow-lg
+         opacity-0 pointer-events-none
+         transition-opacity duration-300">
+
+    <!-- Стрелка -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+        stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
+</button>
+
+<body class="font-sans">
+
+    <!-- Header -->
+    <header class="w-full bg-white">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+
+            <!-- Логотип -->
+            <div class="flex items-center">
+                <img src="assets/images/logo.png" alt="CAREERLAB" class="h-14 w-auto">
+            </div>
+
+            <!-- Навигация -->
+            <nav class="hidden md:flex gap-8 text-sm font-medium text-dark">
+                <a href="#about" class="hover:text-primary">О&nbsp;нас</a>
+                <a href="#courses" class="hover:text-primary">Курсы</a>
+                <a href="#pricing" class="hover:text-primary">Тарифы</a>
+                <a href="#contacts" class="hover:text-primary">Контакты</a>
+            </nav>
+
+            <!-- Авторизация -->
+            <div>
+                <a href="#" class="text-sm font-semibold text-primary hover:underline">
+                    Авторизация →
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- Hero -->
+    <section class="relative min-h-screen bg-cover bg-center" style="background-image: url('assets/images/hero.png');">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <!-- Контент -->
+        <div class="relative z-10 flex items-center justify-center min-h-screen px-6">
+            <div class="max-w-3xl text-center">
+
+                <h1 class="text-4xl sm:text-5xl md:text-6xl
+             font-semibold
+             leading-tight
+             tracking-tight
+             text-white">
+                    Освой новую профессию<br class="hidden sm:block" />
+                    и&nbsp;выйди на&nbsp;новый уровень
+                </h1>
+
+                <p class="mt-6
+             text-base sm:text-lg
+             font-medium
+             leading-relaxed
+             text-white/80">
+                    Получите новые навыки онлайн и&nbsp;начните карьеру,
+                    которая вдохновляет.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About / Stats -->
+    <section id="about" class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+            <!-- Текстовая часть -->
+            <div class="mx-auto max-w-2xl lg:mx-0">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl
+             font-semibold
+             leading-tight
+             tracking-tight
+             text-textMain">
+                    CAREERLAB&nbsp;&mdash; обучение с&nbsp;результатом
+                </h2>
+
+                <p class="mt-6
+             text-base sm:text-lg
+             font-medium
+             leading-relaxed
+             text-graySoft">
+                    Мы&nbsp;помогаем осознанно войти в&nbsp;цифровые профессии&nbsp;&mdash; без&nbsp;воды,
+                    с&nbsp;практикой, поддержкой наставников и&nbsp;фокусом
+                    на&nbsp;реальное трудоустройство.
+                </p>
+            </div>
+
+            <!-- Цифры -->
+            <div class="mx-auto mt-16 max-w-2xl lg:mx-0 lg:max-w-none">
+                <dl class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+
+                    <!-- 1 -->
+                    <div class="flex flex-col-reverse gap-3">
+                        <dt class="text-sm font-medium text-graySoft">
+                            трудоустроенных выпускников
+                        </dt>
+                        <dd class="text-4xl sm:text-5xl font-semibold tracking-tight text-primary" data-counter="90"
+                            data-suffix="%">
+                            0
+                        </dd>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="flex flex-col-reverse gap-3">
+                        <dt class="text-sm font-medium text-graySoft">
+                            курсов и&nbsp;направлений
+                        </dt>
+                        <dd class="text-4xl sm:text-5xl font-semibold tracking-tight text-primary" data-counter="30"
+                            data-suffix="+">
+                            0
+                        </dd>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="flex flex-col-reverse gap-3">
+                        <dt class="text-sm font-medium text-graySoft">
+                            практических проектов
+                        </dt>
+                        <dd class="text-4xl sm:text-5xl font-semibold tracking-tight text-primary" data-counter="120"
+                            data-suffix="+">
+                            0
+                        </dd>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="flex flex-col-reverse gap-3">
+                        <dt class="text-sm font-medium text-graySoft">
+                            опыта в&nbsp;<nobr>онлайн-образовании</nobr>
+                        </dt>
+                        <dd class="text-4xl sm:text-5xl font-semibold tracking-tight text-primary" data-counter="5"
+                            data-suffix=" лет">
+                            0
+                        </dd>
+                    </div>
+
+                </dl>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Popular courses -->
+    <section id="courses" class="bg-light py-24">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Заголовок -->
+            <h2 class="text-3xl sm:text-4xl font-semibold text-textMain text-center">
+                Популярные курсы
+            </h2>
+
+            <p class="mt-4 text-base sm:text-lg font-medium text-graySoft text-center max-w-2xl mx-auto">
+                Хиты обучения&nbsp;&mdash; проверено студентами.
+            </p>
+
+            <!-- Карточки курсов -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- UX/UI -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col">
+                    <img src="assets/images/ux.png" alt="UX/UI дизайн" class="w-full h-56 object-cover">
+
+                    <div class="p-6 flex flex-col grow">
+                        <h3 class="text-xl font-semibold text-textMain">
+                            UX/UI&nbsp;&mdash; дизайнер
+                        </h3>
+
+                        <p class="mt-3 text-sm sm:text-base font-medium text-graySoft leading-relaxed grow">
+                            Создавай удобные и&nbsp;красивые интерфейсы. Научись проектировать дизайн,
+                            который нравится людям&nbsp;&mdash; от&nbsp;идей до&nbsp;готовых макетов.
+                        </p>
+
+                        <button class="mt-6 self-start
+         bg-primary text-white
+         px-5 py-2.5 rounded-lg
+         text-sm font-semibold
+         transition-all duration-300
+         hover:bg-primaryDark
+         hover:-translate-y-0.5
+         hover:shadow-lg
+         active:translate-y-0">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col">
+                    <img src="assets/images/fp.png" alt="Frontend разработка" class="w-full h-56 object-cover">
+
+                    <div class="p-6 flex flex-col grow">
+                        <h3 class="text-xl font-semibold text-textMain">
+                            Frontend&nbsp;&mdash; разработчик
+                        </h3>
+
+                        <p class="mt-3 text-sm sm:text-base font-medium text-graySoft leading-relaxed grow">
+                            Сделай сайты живыми. Освой <nobr>HTML</nobr>, <nobr>CSS</nobr> и&nbsp;JavaScript
+                            и&nbsp;создавай современные интерфейсы, которыми удобно пользоваться.
+                        </p>
+
+                        <button class="mt-6 self-start
+         bg-primary text-white
+         px-5 py-2.5 rounded-lg
+         text-sm font-semibold
+         transition-all duration-300
+         hover:bg-primaryDark
+         hover:-translate-y-0.5
+         hover:shadow-lg
+         active:translate-y-0">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Data -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col">
+                    <img src="assets/images/data.png" alt="Data аналитика" class="w-full h-56 object-cover">
+
+                    <div class="p-6 flex flex-col grow">
+                        <h3 class="text-xl font-semibold text-textMain">
+                            Аналитик данных
+                        </h3>
+
+                        <p class="mt-3 text-sm sm:text-base font-medium text-graySoft leading-relaxed grow">
+                            Превращай данные в&nbsp;решения. Научись собирать, анализировать
+                            и&nbsp;визуализировать данные, чтобы находить инсайты
+                            и&nbsp;помогать бизнесу расти.
+                        </p>
+
+                        <button class="mt-6 self-start
+         bg-primary text-white
+         px-5 py-2.5 rounded-lg
+         text-sm font-semibold
+         transition-all duration-300
+         hover:bg-primaryDark
+         hover:-translate-y-0.5
+         hover:shadow-lg
+         active:translate-y-0">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Кнопка "Все курсы" -->
+            <div class="mt-16 text-center">
+                <button class="bg-white border border-primary text-primary
+         px-8 py-3 rounded-lg
+         text-sm font-semibold
+         transition-all duration-300
+         hover:bg-primary
+         hover:text-white
+         hover:-translate-y-0.5
+         hover:shadow-md
+         active:translate-y-0">
+                    Все курсы
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Promo bar -->
+    <section id="promoBar" class="bg-textMain transform -translate-x-full
+         transition-transform duration-[1200ms] ease-out">
+        <div class="max-w-7xl mx-auto px-6 py-10">
+
+            <div class="flex flex-col lg:flex-row items-start lg:items-center gap-10 lg:gap-14">
+
+                <!-- Левая часть: процент -->
+                <div class="flex-shrink-0">
+                    <div class="text-4xl sm:text-5xl font-semibold text-white">
+                        &#8722;10%
+                    </div>
+                </div>
+
+                <!-- Центр: текст -->
+                <div class="flex-1">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-white">
+                        Начни карьеру со&nbsp;скидкой
+                    </h3>
+
+                    <p class="mt-2 text-light/80 text-sm sm:text-base max-w-3xl leading-relaxed">
+                        Только сейчас&nbsp;&mdash; пройди бесплатную консультацию по&nbsp;выбору профессии
+                        и&nbsp;получи &#8722;10% на&nbsp;старт обучения.
+                    </p>
+                </div>
+
+                <!-- Правая часть: кнопка -->
+                <div class="flex-shrink-0">
+                    <button class="bg-light text-textMain
+         px-8 py-3 rounded-lg
+         font-medium
+         transition-all duration-300 ease-out
+         hover:bg-white
+         hover:-translate-y-0.5
+         hover:shadow-lg
+         active:translate-y-0">
+                        Получить консультацию
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Pricing -->
+    <section id="pricing" class="bg-white py-24">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Заголовок -->
+            <h2 class="text-3xl sm:text-4xl font-semibold text-textMain text-center">
+                Тарифы
+            </h2>
+
+            <p class="mt-4 text-base sm:text-lg font-medium text-graySoft text-center max-w-2xl mx-auto">
+                Выберите формат обучения, который подходит именно вам.
+            </p>
+
+            <!-- Карточки тарифов -->
+            <div class="mt-16 pricing-track">
+
+                <!-- Базовый -->
+                <div
+                    class="pricing-card bg-light rounded-2xl p-8 flex flex-col min-w-[320px] sm:min-w-[360px] snap-center">
+                    <h3 class="text-xl font-semibold text-primary">
+                        Базовый
+                    </h3>
+
+                    <p class="mt-4 flex items-end gap-x-2">
+                        <span class="text-4xl font-semibold text-textMain">
+                            4&nbsp;999&nbsp;₽
+                        </span>
+                        <span class="text-sm font-medium text-graySoft">
+                            /&nbsp;в&nbsp;месяц
+                        </span>
+                    </p>
+
+                    <p class="mt-4 text-sm sm:text-base font-medium text-graySoft">
+                        Подходит для старта и&nbsp;знакомства с&nbsp;профессией.
+                    </p>
+
+                    <ul class="mt-6 space-y-3 text-sm sm:text-base font-medium text-graySoft grow">
+                        <li class="flex gap-x-3">
+                            <span class="text-primary font-semibold">✓</span>
+                            Доступ к&nbsp;видеолекциям
+                        </li>
+                        <li class="flex gap-x-3">
+                            <span class="text-primary font-semibold">✓</span>
+                            Практические задания
+                        </li>
+                        <li class="flex gap-x-3">
+                            <span class="text-primary font-semibold">✓</span>
+                            Тесты и&nbsp;проверка знаний
+                        </li>
+                        <li class="flex gap-x-3">
+                            <span class="text-primary font-semibold">✓</span>
+                            Диплом по&nbsp;итогам курса
+                        </li>
+                        <li class="flex gap-x-3">
+                            <span class="text-primary font-semibold">✓</span>
+                            Поддержка в&nbsp;чате с&nbsp;куратором
+                        </li>
+                    </ul>
+
+                    <button class="mt-8 bg-primary text-white py-3 rounded-lg
+  text-sm font-semibold
+  transition-all duration-300
+  hover:bg-primaryDark hover:shadow-lg">
+                        Выбрать тариф
+                    </button>
+                </div>
+
+                <!-- Продвинутый -->
+                <div
+                    class="pricing-card bg-light rounded-2xl p-8 flex flex-col min-w-[320px] sm:min-w-[360px] snap-center is-active">
+                    <h3 class="text-xl font-semibold text-primary">
+                        Продвинутый
+                    </h3>
+
+                    <p class="mt-4 flex items-end gap-x-2">
+                        <span class="text-4xl font-semibold text-textMain">
+                            5&nbsp;999&nbsp;₽
+                        </span>
+                        <span class="text-sm font-medium text-graySoft">
+                            /&nbsp;в&nbsp;месяц
+                        </span>
+                    </p>
+
+                    <p class="mt-4 text-sm sm:text-base font-medium text-graySoft">
+                        Оптимальный вариант с&nbsp;поддержкой и&nbsp;практикой.
+                    </p>
+
+                    <ul class="mt-6 space-y-3 text-sm sm:text-base font-medium text-graySoft grow">
+                        <li class="flex gap-x-3">
+                            <span class="text-primary font-semibold">✓</span>
+                            Всё из&nbsp;тарифа «Базовый»
+                        </li>
+                        <li class="flex gap-x-3">
+                            <span class="text-primary font-semibold">✓</span>
+                            Индивидуальная проверка заданий
+                        </li>
+                        <li class="flex gap-x-3">
+                            <span class="text-primary font-semibold">✓</span>
+                            Разбор ошибок с&nbsp;наставником
+                        </li>
+                        <li class="flex gap-x-3">
+                            <span class="text-primary font-semibold">✓</span>
+                            Выпускной проект в&nbsp;портфолио
+                        </li>
+                        <li class="flex gap-x-3">
+                            <span class="text-primary font-semibold">✓</span>
+                            Карьерная консультация
+                        </li>
+                        <li class="flex gap-x-3">
+                            <span class="text-primary font-semibold">✓</span>
+                            Доступ к&nbsp;карьерному чату
+                        </li>
+                    </ul>
+
+                    <button class="mt-8 bg-primary text-white py-3 rounded-lg
+  text-sm font-semibold
+  transition-all duration-300
+  hover:bg-primaryDark hover:shadow-lg">
+                        Выбрать тариф
+                    </button>
+                </div>
+
+                <!-- Индивидуальный -->
+                <div
+                    class="pricing-card bg-light rounded-2xl p-8 flex flex-col min-w-[320px] sm:min-w-[360px] snap-center">
+                    <h3 class="text-xl font-semibold text-primary">
+                        Индивидуальный
+                    </h3>
+
+                    <p class="mt-4 text-4xl font-semibold text-textMain">
+                        По&nbsp;запросу
+                    </p>
+
+                    <p class="mt-4 text-sm sm:text-base font-medium text-graySoft">
+                        Персональный маршрут обучения под&nbsp;вашу цель.
+                    </p>
+
+                    <ul class="mt-6 space-y-3 text-sm sm:text-base font-medium text-graySoft grow">
+                        <li class="flex gap-x-3">
+                            <span class="text-primary font-semibold">✓</span>
+                            Всё из&nbsp;тарифа «Продвинутый»
+                        </li>
+                        <li class="flex gap-x-3">
+                            <span class="text-primary font-semibold">✓</span>
+                            Индивидуальный план обучения
+                        </li>
+                        <li class="flex gap-x-3">
+                            <span class="text-primary font-semibold">✓</span>
+                            Личный ментор
+                        </li>
+                        <li class="flex gap-x-3">
+                            <span class="text-primary font-semibold">✓</span>
+                            Поддержка в&nbsp;поиске стажировки
+                        </li>
+                        <li class="flex gap-x-3">
+                            <span class="text-primary font-semibold">✓</span>
+                            Приоритетный доступ к&nbsp;новым курсам
+                        </li>
+                    </ul>
+
+                    <button class="mt-8 bg-primary text-white py-3 rounded-lg
+  text-sm font-semibold
+  transition-all duration-300
+  hover:bg-primaryDark hover:shadow-lg">
+                        Оставить заявку
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Reviews -->
+    <section class="bg-light py-24">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Заголовок -->
+            <h2 class="text-3xl sm:text-4xl font-semibold text-textMain text-center">
+                Истории успеха наших выпускников
+            </h2>
+
+            <!-- Сетка отзывов -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-16">
+
+                <!-- Отзыв 1 -->
+                <div class="flex items-start gap-6">
+                    <img src="assets/images/image1.png" alt="Дарья" class="w-32 h-32 rounded-full object-cover" />
+
+                    <div>
+                        <p class="text-sm sm:text-base font-medium leading-relaxed text-graySoft">
+                            Я&nbsp;раньше работала менеджером в&nbsp;розничной торговле, но&nbsp;всегда тянулась
+                            к&nbsp;рекламе.
+                            В&nbsp;CAREERLAB я&nbsp;решилась на&nbsp;смену профессии&nbsp;&mdash; прошла курс по&nbsp;
+                            <nobr>интернет-маркетингу</nobr>,
+                            научилась работать с&nbsp;аналитикой и&nbsp;реальными кейсами.
+                            Сейчас я&nbsp;работаю в&nbsp;Avito в&nbsp;<nobr>digital-отделе</nobr> и&nbsp;понимаю, что
+                            двигаюсь в&nbsp;правильном направлении.
+                        </p>
+
+                        <p class="mt-4 text-base font-semibold text-textMain">
+                            Дарья
+                        </p>
+                        <p class="text-sm font-medium text-primary">
+                            <nobr>Интернет-маркетолог</nobr> в&nbsp;Avito
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Отзыв 2 -->
+                <div class="flex items-start gap-6">
+                    <img src="assets/images/image2.png" alt="Алексей" class="w-32 h-32 rounded-full object-cover" />
+
+                    <div>
+                        <p class="text-sm sm:text-base font-medium leading-relaxed text-graySoft">
+                            До&nbsp;CAREERLAB я&nbsp;пробовал себя в&nbsp;разных сферах, но&nbsp;только программирование
+                            действительно увлекло. На&nbsp;курсе по&nbsp;Python я&nbsp;начал с&nbsp;нуля, писал реальные
+                            проекты
+                            и&nbsp;получал обратную связь от&nbsp;ментора.
+                            Сейчас я&nbsp;работаю в&nbsp;<nobr>VK&nbsp;Cloud</nobr> и&nbsp;занимаюсь автоматизацией
+                            внутренних процессов.
+                        </p>
+
+                        <p class="mt-4 text-base font-semibold text-textMain">
+                            Алексей
+                        </p>
+                        <p class="text-sm font-medium text-primary">
+                            <nobr>Python-разработчик</nobr> в&nbsp;VK
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Отзыв 3 -->
+                <div class="flex items-start gap-6">
+                    <img src="assets/images/image3.png" alt="Екатерина" class="w-32 h-32 rounded-full object-cover" />
+
+                    <div>
+                        <p class="text-sm sm:text-base font-medium leading-relaxed text-graySoft">
+                            Во&nbsp;время декрета я&nbsp;искала профессию, которая позволит вернуться к&nbsp;работе
+                            гибко и&nbsp;с&nbsp;перспективой роста. Курс по&nbsp;тестированию в&nbsp;CAREERLAB
+                            оказался именно тем, что нужно: практика, поддержка и&nbsp;понятная структура.
+                            Сейчас я&nbsp;работаю <nobr>QA-специалистом</nobr> в&nbsp;Wildberries.
+                        </p>
+
+                        <p class="mt-4 text-base font-semibold text-textMain">
+                            Екатерина
+                        </p>
+                        <p class="text-sm font-medium text-primary">
+                            <nobr>QA-специалист</nobr> в&nbsp;Wildberries
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Отзыв 4 -->
+                <div class="flex items-start gap-6">
+                    <img src="assets/images/image4.png" alt="Дмитрий" class="w-32 h-32 rounded-full object-cover" />
+
+                    <div>
+                        <p class="text-sm sm:text-base font-medium leading-relaxed text-graySoft">
+                            Я&nbsp;работал системным администратором и&nbsp;хотел развиваться дальше.
+                            В&nbsp;CAREERLAB я&nbsp;прошёл курс по&nbsp;информационной безопасности, разобрался
+                            в&nbsp;реальных угрозах и&nbsp;инструментах.
+                            Сейчас я&nbsp;работаю в&nbsp;SberTech и&nbsp;отвечаю за&nbsp;безопасность инфраструктуры.
+                        </p>
+
+                        <p class="mt-4 text-base font-semibold text-textMain">
+                            Дмитрий
+                        </p>
+                        <p class="text-sm font-medium text-primary">
+                            Специалист по&nbsp;кибербезопасности в&nbsp;SberTech
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section id="faq" class="bg-white py-24">
+        <div class="max-w-5xl mx-auto px-6">
+
+            <!-- Заголовок -->
+            <h2 class="text-3xl sm:text-4xl font-semibold text-textMain text-center">
+                Часто задаваемые вопросы
+            </h2>
+
+            <p class="mt-4 text-center text-base sm:text-lg font-medium text-graySoft">
+                Мы&nbsp;собрали ответы на&nbsp;самые популярные вопросы о&nbsp;платформе CAREERLAB.
+            </p>
+
+            <!-- Список вопросов -->
+            <div class="mt-16 space-y-4">
+
+                <!-- Вопрос 1 -->
+                <div class="faq-item border border-borderSoft rounded-xl">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left" type="button">
+                        <span class="text-base font-semibold text-textMain">
+                            Нужен&nbsp;ли опыт, чтобы начать обучение?
+                        </span>
+                        <span class="faq-arrow">
+                            <svg class="w-5 h-5 transition-transform duration-300" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                            Нет, все курсы рассчитаны на&nbsp;новичков. Вы&nbsp;начнёте с&nbsp;основ
+                            и&nbsp;шаг за&nbsp;шагом дойдёте до&nbsp;уверенного уровня
+                            с&nbsp;поддержкой наставников.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Вопрос 2 -->
+                <div class="faq-item border border-borderSoft rounded-xl">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left" type="button">
+                        <span class="text-base font-semibold text-textMain">
+                            Сколько длится обучение?
+                        </span>
+                        <span class="faq-arrow">
+                            <svg class="w-5 h-5 transition-transform duration-300" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                            Средняя продолжительность&nbsp;&mdash; от&nbsp;2&nbsp;до&nbsp;6&nbsp;месяцев,
+                            в&nbsp;зависимости от&nbsp;выбранной профессии и&nbsp;формата.
+                            Вы&nbsp;можете проходить курс в&nbsp;удобном темпе.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Вопрос 3 -->
+                <div class="faq-item border border-borderSoft rounded-xl">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left" type="button">
+                        <span class="text-base font-semibold text-textMain">
+                            А&nbsp;если будет сложно или не&nbsp;получится?
+                        </span>
+                        <span class="faq-arrow">
+                            <svg class="w-5 h-5 transition-transform duration-300" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                            У&nbsp;вас будет ментор, куратор и&nbsp;поддержка комьюнити.
+                            Мы&nbsp;помогаем дойти до&nbsp;результата даже тем,
+                            кто начинал с&nbsp;нуля.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Вопрос 4 -->
+                <div class="faq-item border border-borderSoft rounded-xl">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left" type="button">
+                        <span class="text-base font-semibold text-textMain">
+                            Помогаете&nbsp;ли вы&nbsp;с&nbsp;трудоустройством?
+                        </span>
+                        <span class="faq-arrow">
+                            <svg class="w-5 h-5 transition-transform duration-300" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                            Да! На&nbsp;продвинутых и&nbsp;индивидуальных тарифах включена карьерная
+                            поддержка: мы&nbsp;помогаем составить резюме, подготовиться
+                            к&nbsp;собеседованиям и&nbsp;найти первые проекты или стажировку.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Вопрос 5 -->
+                <div class="faq-item border border-borderSoft rounded-xl">
+                    <button class="faq-question w-full flex items-center justify-between p-6 text-left" type="button">
+                        <span class="text-base font-semibold text-textMain">
+                            Можно&nbsp;ли вернуть деньги, если курс не&nbsp;подойдёт?
+                        </span>
+                        <span class="faq-arrow">
+                            <svg class="w-5 h-5 transition-transform duration-300" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                            Да, у&nbsp;нас действует гарантия возврата средств
+                            в&nbsp;течение первых 7&nbsp;дней обучения&nbsp;&mdash;
+                            без&nbsp;лишних вопросов.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contacts -->
+    <section id="contacts" class="bg-light py-24">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Заголовок -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-semibold text-textMain">
+                    Свяжитесь с&nbsp;нами
+                </h2>
+                <p class="mt-4 text-base sm:text-lg font-medium text-graySoft">
+                    Оставьте заявку&nbsp;&mdash; мы&nbsp;поможем выбрать курс и&nbsp;ответим на&nbsp;все вопросы.
+                </p>
+            </div>
+
+            <!-- Основная сетка -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+                <!-- Форма -->
+                <form class="bg-white rounded-2xl p-8 shadow-sm space-y-6">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block mb-1 text-sm font-medium text-textMain">
+                                Имя
+                            </label>
+                            <input type="text" class="w-full rounded-lg border border-borderSoft px-4 py-2
+                   text-sm font-medium text-textMain
+                   focus:outline-none focus:border-primary" />
+                        </div>
+
+                        <div>
+                            <label class="block mb-1 text-sm font-medium text-textMain">
+                                Фамилия
+                            </label>
+                            <input type="text" class="w-full rounded-lg border border-borderSoft px-4 py-2
+                   text-sm font-medium text-textMain
+                   focus:outline-none focus:border-primary" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block mb-1 text-sm font-medium text-textMain">
+                            Email
+                        </label>
+                        <input type="email" class="w-full rounded-lg border border-borderSoft px-4 py-2
+                 text-sm font-medium text-textMain
+                 focus:outline-none focus:border-primary" />
+                    </div>
+
+                    <div>
+                        <label class="block mb-1 text-sm font-medium text-textMain">
+                            Сообщение
+                        </label>
+                        <textarea rows="4" class="w-full rounded-lg border border-borderSoft px-4 py-2
+                   text-sm font-medium text-textMain
+                   focus:outline-none focus:border-primary"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full rounded-lg bg-primary text-white py-3
+               text-sm font-semibold
+               hover:opacity-90 transition">
+                        Отправить заявку
+                    </button>
+                </form>
+
+                <!-- Правая колонка -->
+                <div class="flex flex-col gap-6">
+
+                    <!-- Контактная информация -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-textMain">
+                            Контактная информация
+                        </h3>
+                        <p class="mt-2 text-sm font-medium text-graySoft">
+                            Мы&nbsp;на&nbsp;связи и&nbsp;готовы помочь вам начать обучение.
+                        </p>
+
+                        <div class="mt-4 space-y-3 text-sm font-medium text-textMain">
+                            <p>
+                                <span class="font-semibold">Email:</span><br />
+                                <a href="mailto:support@careerlab.ru" class="text-primary hover:underline">
+                                    support@careerlab.ru
+                                </a>
+                            </p>
+                            <p>
+                                <span class="font-semibold">Телефон:</span><br />
+                                <nobr>+7&nbsp;(900)&nbsp;123&#8209;45&#8209;67</nobr>
+                            </p>
+                            <p>
+                                <span class="font-semibold">График работы:</span><br />
+                                <nobr>Пн&ndash;Пт</nobr>, <nobr>10:00&ndash;19:00</nobr>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Подписка -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-textMain">
+                            Подпишитесь на&nbsp;новости
+                        </h3>
+                        <p class="mt-2 text-sm font-medium text-graySoft">
+                            Анонсы курсов, карьерные советы и&nbsp;полезные материалы.
+                        </p>
+
+                        <div class="mt-4 flex gap-3">
+                            <input type="email" placeholder="Ваш&nbsp;e-mail" class="flex-1 rounded-lg border border-borderSoft px-4 py-2
+                   text-sm font-medium text-textMain
+                   focus:outline-none focus:border-primary" />
+                            <button class="rounded-lg bg-primary px-5 py-2
+                   text-sm font-semibold text-white
+                   hover:opacity-90 transition">
+                                Подписаться
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-graySoft">
+
+        <!-- Верхняя часть футера (контент, ограниченный) -->
+        <div class="max-w-7xl mx-auto px-6 py-16">
+
+            <!-- Основная сетка -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12">
+
+                <!-- Бренд -->
+                <div>
+                    <div class="flex items-center gap-3">
+                        <img src="assets/images/logo.png" alt="CAREERLAB" class="h-10">
+                        <span class="text-lg font-semibold text-textMain">
+                            CAREERLAB
+                        </span>
+                    </div>
+
+                    <p class="mt-4 text-sm text-graySoft">
+                        Онлайн-платформа для&nbsp;старта и&nbsp;роста в&nbsp;цифровых профессиях.
+                        Обучение с&nbsp;практикой и&nbsp;поддержкой наставников.
+                    </p>
+                </div>
+
+                <!-- Навигация -->
+                <div>
+                    <h4 class="text-sm font-semibold text-textMain mb-4">
+                        Навигация
+                    </h4>
+                    <ul class="space-y-3 text-sm text-textMain">
+                        <li><a href="#about" class="hover:text-primary">О&nbsp;нас</a></li>
+                        <li><a href="#courses" class="hover:text-primary">Курсы</a></li>
+                        <li><a href="#pricing" class="hover:text-primary">Тарифы</a></li>
+                        <li><a href="#contacts" class="hover:text-primary">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <!-- Контакты -->
+                <div>
+                    <h4 class="text-sm font-semibold text-textMain mb-4">
+                        Контакты
+                    </h4>
+                    <ul class="space-y-3 text-sm text-textMain">
+                        <li>
+                            Email:<br>
+                            <a href="mailto:support@careerlab.ru" class="text-primary hover:underline">
+                                support@careerlab.ru
+                            </a>
+                        </li>
+                        <li>
+                            Телефон:<br>
+                            <nobr>+7&nbsp;(900)&nbsp;123&#8209;45&#8209;67</nobr>
+                        </li>
+                        <li>
+                            <nobr>Пн&ndash;Пт</nobr>, <nobr>10:00&ndash;19:00</nobr>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Документы -->
+                <div>
+                    <h4 class="text-sm font-semibold text-textMain mb-4">
+                        Документы
+                    </h4>
+                    <ul class="space-y-3 text-sm text-textMain">
+                        <li><a href="#" class="hover:text-primary">Политика обработки персональных данных</a></li>
+                        <li><a href="#" class="hover:text-primary">Публичная оферта (физ.&nbsp;лица)</a></li>
+                        <li><a href="#" class="hover:text-primary">Публичная оферта (юр.&nbsp;лица и&nbsp;ИП)</a></li>
+                        <li><a href="#" class="hover:text-primary">Государственная лицензия</a></li>
+                        <li><a href="#" class="hover:text-primary">Сведения об&nbsp;образовательной организации</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Нижняя строка (НА ВСЮ ШИРИНУ) -->
+        <div class="border-t border-graySoft py-6 text-center text-sm text-graySoft">
+            ©&nbsp;2026 CAREERLAB. Все права защищены.
+        </div>
+
+    </footer>
+
+    <!-- Image modal -->
+    <div id="imageModal" class="fixed inset-0 z-50 flex items-center justify-center
+            bg-black/80 opacity-0 pointer-events-none transition">
+
+        <img id="modalImage" src="" alt="" class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl
+              scale-95 transition-transform duration-300" />
+    </div>
+
+    <script src="assets/js/smooth-scroll.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
