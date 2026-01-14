@@ -167,23 +167,128 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // FAQ
 document.addEventListener('DOMContentLoaded', () => {
-  const faqItems = document.querySelectorAll('.faq-item');
+    const faqItems = document.querySelectorAll('.faq-item');
 
-  faqItems.forEach(item => {
-    const button = item.querySelector('.faq-question');
+    faqItems.forEach(item => {
+        const button = item.querySelector('.faq-question');
 
-    button.addEventListener('click', () => {
-      const isOpen = item.classList.contains('is-open');
+        button.addEventListener('click', () => {
+            const isOpen = item.classList.contains('is-open');
 
-      // закрываем все
-      faqItems.forEach(i => {
-        i.classList.remove('is-open');
-      });
+            // закрываем все
+            faqItems.forEach(i => {
+                i.classList.remove('is-open');
+            });
 
-      // если был закрыт — открываем
-      if (!isOpen) {
-        item.classList.add('is-open');
-      }
+            // если был закрыт — открываем
+            if (!isOpen) {
+                item.classList.add('is-open');
+            }
+        });
     });
-  });
+});
+
+
+// МОДАЛЬНОЕ ОКНО КОНТАКТОВ
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('#contacts form');
+    const modal = document.getElementById('successModal');
+    const closeBtn = document.getElementById('closeSuccessModal');
+
+    if (!form || !modal || !closeBtn) return;
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        // показываем модалку
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.querySelector('div').classList.remove('scale-95');
+
+        // очищаем форму
+        form.reset();
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modal.querySelector('div').classList.add('scale-95');
+    });
+
+    // закрытие по клику на затемнение
+    modal.addEventListener('click', e => {
+        if (e.target === modal) {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modal.querySelector('div').classList.add('scale-95');
+        }
+    });
+});
+
+
+// ТЕЛЕФОН
+document.addEventListener('DOMContentLoaded', () => {
+    const phoneInput = document.getElementById('phone');
+    if (!phoneInput) return;
+
+    function formatPhone(value) {
+        // оставляем только цифры
+        let digits = value.replace(/\D/g, '');
+
+        // всегда начинаем с 7
+        if (digits.startsWith('8')) digits = '7' + digits.slice(1);
+        if (!digits.startsWith('7')) digits = '7' + digits;
+
+        digits = digits.slice(0, 11); // +7 и 10 цифр
+
+        let formatted = '+7';
+
+        if (digits.length > 1) {
+            formatted += ' (' + digits.slice(1, 4);
+        }
+        if (digits.length >= 4) {
+            formatted += ') ' + digits.slice(4, 7);
+        }
+        if (digits.length >= 7) {
+            formatted += '-' + digits.slice(7, 9);
+        }
+        if (digits.length >= 9) {
+            formatted += '-' + digits.slice(9, 11);
+        }
+
+        return formatted;
+    }
+
+    phoneInput.addEventListener('input', () => {
+        phoneInput.value = formatPhone(phoneInput.value);
+    });
+
+    phoneInput.addEventListener('focus', () => {
+        if (!phoneInput.value) {
+            phoneInput.value = '+7 ';
+        }
+    });
+
+    phoneInput.addEventListener('keydown', (e) => {
+        if (
+            phoneInput.selectionStart <= 2 &&
+            (e.key === 'Backspace' || e.key === 'Delete')
+        ) {
+            e.preventDefault();
+        }
+    });
+});
+
+
+// ПОДПИСКА
+document.addEventListener('DOMContentLoaded', () => {
+    const subscribeBtn = document.getElementById('subscribeBtn');
+    const subscribeForm = document.getElementById('subscribeForm');
+    const subscribeSuccess = document.getElementById('subscribeSuccess');
+
+    if (!subscribeBtn) return;
+
+    subscribeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        subscribeForm.classList.add('hidden');
+        subscribeSuccess.classList.remove('hidden');
+    });
 });

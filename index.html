@@ -37,8 +37,10 @@
 
 </head>
 
-<!-- Scroll to top -->
-<button id="scrollToTop" aria-label="Наверх" class="fixed bottom-6 right-6 z-50
+<body class="font-sans">
+
+    <!-- Scroll to top -->
+    <button id="scrollToTop" aria-label="Наверх" class="fixed bottom-6 right-6 z-50
          w-12 h-12 rounded-full
          bg-primaryDark
          flex items-center justify-center
@@ -47,14 +49,12 @@
          opacity-0 pointer-events-none
          transition-opacity duration-300">
 
-    <!-- Стрелка -->
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-        stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-    </svg>
-</button>
-
-<body class="font-sans">
+        <!-- Стрелка -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
 
     <!-- Header -->
     <header class="w-full bg-white">
@@ -75,7 +75,7 @@
 
             <!-- Авторизация -->
             <div>
-                <a href="#" class="text-sm font-semibold text-primary hover:underline">
+                <a href="login.html" class="text-sm font-semibold text-primary hover:underline">
                     Авторизация →
                 </a>
             </div>
@@ -181,7 +181,7 @@
                     <!-- 4 -->
                     <div class="flex flex-col-reverse gap-3">
                         <dt class="text-sm font-medium text-graySoft">
-                            опыта в&nbsp;<nobr>онлайн-образовании</nobr>
+                            опыта в&nbsp;<span class="whitespace-nowrap">онлайн-образовании</span>
                         </dt>
                         <dd class="text-4xl sm:text-5xl font-semibold tracking-tight text-primary" data-counter="5"
                             data-suffix=" лет">
@@ -226,17 +226,17 @@
                             который нравится людям&nbsp;&mdash; от&nbsp;идей до&nbsp;готовых макетов.
                         </p>
 
-                        <button class="mt-6 self-start
-         bg-primary text-white
-         px-5 py-2.5 rounded-lg
-         text-sm font-semibold
-         transition-all duration-300
-         hover:bg-primaryDark
-         hover:-translate-y-0.5
-         hover:shadow-lg
-         active:translate-y-0">
+                        <a href="#contacts" class="mt-6 self-start inline-flex
+          bg-primary text-white
+          px-5 py-2.5 rounded-lg
+          text-sm font-semibold
+          transition-all duration-300
+          hover:bg-primaryDark
+          hover:-translate-y-0.5
+          hover:shadow-lg
+          active:translate-y-0">
                             Подробнее
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -250,21 +250,22 @@
                         </h3>
 
                         <p class="mt-3 text-sm sm:text-base font-medium text-graySoft leading-relaxed grow">
-                            Сделай сайты живыми. Освой <nobr>HTML</nobr>, <nobr>CSS</nobr> и&nbsp;JavaScript
+                            Сделай сайты живыми. Освой <span class="whitespace-nowrap">HTML</span>, <span
+                                class="whitespace-nowrap">CSS</span> и&nbsp;JavaScript
                             и&nbsp;создавай современные интерфейсы, которыми удобно пользоваться.
                         </p>
 
-                        <button class="mt-6 self-start
-         bg-primary text-white
-         px-5 py-2.5 rounded-lg
-         text-sm font-semibold
-         transition-all duration-300
-         hover:bg-primaryDark
-         hover:-translate-y-0.5
-         hover:shadow-lg
-         active:translate-y-0">
+                        <a href="#contacts" class="mt-6 self-start inline-flex
+          bg-primary text-white
+          px-5 py-2.5 rounded-lg
+          text-sm font-semibold
+          transition-all duration-300
+          hover:bg-primaryDark
+          hover:-translate-y-0.5
+          hover:shadow-lg
+          active:translate-y-0">
                             Подробнее
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -283,17 +284,17 @@
                             и&nbsp;помогать бизнесу расти.
                         </p>
 
-                        <button class="mt-6 self-start
-         bg-primary text-white
-         px-5 py-2.5 rounded-lg
-         text-sm font-semibold
-         transition-all duration-300
-         hover:bg-primaryDark
-         hover:-translate-y-0.5
-         hover:shadow-lg
-         active:translate-y-0">
+                        <a href="#contacts" class="mt-6 self-start inline-flex
+          bg-primary text-white
+          px-5 py-2.5 rounded-lg
+          text-sm font-semibold
+          transition-all duration-300
+          hover:bg-primaryDark
+          hover:-translate-y-0.5
+          hover:shadow-lg
+          active:translate-y-0">
                             Подробнее
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -301,19 +302,18 @@
 
             <!-- Кнопка "Все курсы" -->
             <div class="mt-16 text-center">
-                <button class="bg-white border border-primary text-primary
-         px-8 py-3 rounded-lg
-         text-sm font-semibold
-         transition-all duration-300
-         hover:bg-primary
-         hover:text-white
-         hover:-translate-y-0.5
-         hover:shadow-md
-         active:translate-y-0">
+                <a href="404.html" class="inline-block bg-white border border-primary text-primary
+               px-8 py-3 rounded-lg
+               text-sm font-semibold
+               transition-all duration-300
+               hover:bg-primary
+               hover:text-white
+               hover:-translate-y-0.5
+               hover:shadow-md
+               active:translate-y-0">
                     Все курсы
-                </button>
+                </a>
             </div>
-
         </div>
     </section>
 
@@ -346,16 +346,11 @@
 
                 <!-- Правая часть: кнопка -->
                 <div class="flex-shrink-0">
-                    <button class="bg-light text-textMain
-         px-8 py-3 rounded-lg
-         font-medium
-         transition-all duration-300 ease-out
-         hover:bg-white
-         hover:-translate-y-0.5
-         hover:shadow-lg
-         active:translate-y-0">
+                    <a href="#contacts" class="inline-flex items-center justify-center
+          bg-light text-textMain px-8 py-3 rounded-lg font-medium
+          hover:opacity-90 transition whitespace-nowrap">
                         Получить консультацию
-                    </button>
+                    </a>
                 </div>
 
             </div>
@@ -423,12 +418,13 @@
                         </li>
                     </ul>
 
-                    <button class="mt-8 bg-primary text-white py-3 rounded-lg
-  text-sm font-semibold
-  transition-all duration-300
-  hover:bg-primaryDark hover:shadow-lg">
+                    <a href="#contacts" class="mt-8 inline-flex justify-center
+          bg-primary text-white py-3 rounded-lg
+          text-sm font-semibold
+          transition-all duration-300
+          hover:bg-primaryDark hover:shadow-lg">
                         Выбрать тариф
-                    </button>
+                    </a>
                 </div>
 
                 <!-- Продвинутый -->
@@ -478,12 +474,13 @@
                         </li>
                     </ul>
 
-                    <button class="mt-8 bg-primary text-white py-3 rounded-lg
-  text-sm font-semibold
-  transition-all duration-300
-  hover:bg-primaryDark hover:shadow-lg">
+                    <a href="#contacts" class="mt-8 inline-flex justify-center
+          bg-primary text-white py-3 rounded-lg
+          text-sm font-semibold
+          transition-all duration-300
+          hover:bg-primaryDark hover:shadow-lg">
                         Выбрать тариф
-                    </button>
+                    </a>
                 </div>
 
                 <!-- Индивидуальный -->
@@ -524,12 +521,13 @@
                         </li>
                     </ul>
 
-                    <button class="mt-8 bg-primary text-white py-3 rounded-lg
-  text-sm font-semibold
-  transition-all duration-300
-  hover:bg-primaryDark hover:shadow-lg">
-                        Оставить заявку
-                    </button>
+                    <a href="#contacts" class="mt-8 inline-flex justify-center
+          bg-primary text-white py-3 rounded-lg
+          text-sm font-semibold
+          transition-all duration-300
+          hover:bg-primaryDark hover:shadow-lg">
+                        Выбрать тариф
+                    </a>
                 </div>
 
             </div>
@@ -559,9 +557,10 @@
                             Я&nbsp;раньше работала менеджером в&nbsp;розничной торговле, но&nbsp;всегда тянулась
                             к&nbsp;рекламе.
                             В&nbsp;CAREERLAB я&nbsp;решилась на&nbsp;смену профессии&nbsp;&mdash; прошла курс по&nbsp;
-                            <nobr>интернет-маркетингу</nobr>,
+                            <span class="whitespace-nowrap">интернет-маркетингу</span>,
                             научилась работать с&nbsp;аналитикой и&nbsp;реальными кейсами.
-                            Сейчас я&nbsp;работаю в&nbsp;Avito в&nbsp;<nobr>digital-отделе</nobr> и&nbsp;понимаю, что
+                            Сейчас я&nbsp;работаю в&nbsp;Avito в&nbsp;<span
+                                class="whitespace-nowrap">digital-отделе</span> и&nbsp;понимаю, что
                             двигаюсь в&nbsp;правильном направлении.
                         </p>
 
@@ -569,7 +568,7 @@
                             Дарья
                         </p>
                         <p class="text-sm font-medium text-primary">
-                            <nobr>Интернет-маркетолог</nobr> в&nbsp;Avito
+                            <span class="whitespace-nowrap">Интернет-маркетолог</span> в&nbsp;Avito
                         </p>
                     </div>
                 </div>
@@ -584,7 +583,8 @@
                             действительно увлекло. На&nbsp;курсе по&nbsp;Python я&nbsp;начал с&nbsp;нуля, писал реальные
                             проекты
                             и&nbsp;получал обратную связь от&nbsp;ментора.
-                            Сейчас я&nbsp;работаю в&nbsp;<nobr>VK&nbsp;Cloud</nobr> и&nbsp;занимаюсь автоматизацией
+                            Сейчас я&nbsp;работаю в&nbsp;<span class="whitespace-nowrap">VK&nbsp;Cloud</span>
+                            и&nbsp;занимаюсь автоматизацией
                             внутренних процессов.
                         </p>
 
@@ -592,7 +592,7 @@
                             Алексей
                         </p>
                         <p class="text-sm font-medium text-primary">
-                            <nobr>Python-разработчик</nobr> в&nbsp;VK
+                            <span class="whitespace-nowrap">Python-разработчик</span> в&nbsp;VK
                         </p>
                     </div>
                 </div>
@@ -606,14 +606,15 @@
                             Во&nbsp;время декрета я&nbsp;искала профессию, которая позволит вернуться к&nbsp;работе
                             гибко и&nbsp;с&nbsp;перспективой роста. Курс по&nbsp;тестированию в&nbsp;CAREERLAB
                             оказался именно тем, что нужно: практика, поддержка и&nbsp;понятная структура.
-                            Сейчас я&nbsp;работаю <nobr>QA-специалистом</nobr> в&nbsp;Wildberries.
+                            Сейчас я&nbsp;работаю <span class="whitespace-nowrap">QA-специалистом</span>
+                            в&nbsp;Wildberries.
                         </p>
 
                         <p class="mt-4 text-base font-semibold text-textMain">
                             Екатерина
                         </p>
                         <p class="text-sm font-medium text-primary">
-                            <nobr>QA-специалист</nobr> в&nbsp;Wildberries
+                            <span class="whitespace-nowrap">QA-специалист</span> в&nbsp;Wildberries
                         </p>
                     </div>
                 </div>
@@ -821,12 +822,16 @@
                     </div>
 
                     <div>
-                        <label class="block mb-1 text-sm font-medium text-textMain">
-                            Email
+                        <label class="block text-sm font-medium text-textMain">
+                            Телефон
                         </label>
-                        <input type="email" class="w-full rounded-lg border border-borderSoft px-4 py-2
-                 text-sm font-medium text-textMain
-                 focus:outline-none focus:border-primary" />
+                        <input id="phone" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required class="mt-2 block w-full rounded-xl
+         border border-borderSoft
+         px-4 py-3
+         text-sm
+         outline-none
+         focus:border-primary
+         focus:ring-2 focus:ring-primary/20" />
                     </div>
 
                     <div>
@@ -866,11 +871,12 @@
                             </p>
                             <p>
                                 <span class="font-semibold">Телефон:</span><br />
-                                <nobr>+7&nbsp;(900)&nbsp;123&#8209;45&#8209;67</nobr>
+                                <span class="whitespace-nowrap">+7&nbsp;(900)&nbsp;123&#8209;45&#8209;67</span>
                             </p>
                             <p>
                                 <span class="font-semibold">График работы:</span><br />
-                                <nobr>Пн&ndash;Пт</nobr>, <nobr>10:00&ndash;19:00</nobr>
+                                <span class="whitespace-nowrap">Пн&ndash;Пт</span>, <span
+                                    class="whitespace-nowrap">10:00&ndash;19:00</span>
                             </p>
                         </div>
                     </div>
@@ -884,16 +890,20 @@
                             Анонсы курсов, карьерные советы и&nbsp;полезные материалы.
                         </p>
 
-                        <div class="mt-4 flex gap-3">
-                            <input type="email" placeholder="Ваш&nbsp;e-mail" class="flex-1 rounded-lg border border-borderSoft px-4 py-2
-                   text-sm font-medium text-textMain
-                   focus:outline-none focus:border-primary" />
-                            <button class="rounded-lg bg-primary px-5 py-2
-                   text-sm font-semibold text-white
-                   hover:opacity-90 transition">
+                        <div class="mt-4 flex gap-3" id="subscribeForm">
+                            <input type="email" placeholder="Ваш&nbsp;e-mail" required class="flex-1 rounded-lg border border-borderSoft px-4 py-2
+               text-sm font-medium text-textMain
+               focus:outline-none focus:border-primary" />
+                            <button id="subscribeBtn" class="rounded-lg bg-primary px-5 py-2
+               text-sm font-semibold text-white
+               hover:opacity-90 transition">
                                 Подписаться
                             </button>
                         </div>
+
+                        <p id="subscribeSuccess" class="mt-4 text-sm font-semibold text-primary hidden">
+                            Вы подписаны!
+                        </p>
                     </div>
 
                 </div>
@@ -954,10 +964,11 @@
                         </li>
                         <li>
                             Телефон:<br>
-                            <nobr>+7&nbsp;(900)&nbsp;123&#8209;45&#8209;67</nobr>
+                            <span class="whitespace-nowrap">+7&nbsp;(900)&nbsp;123&#8209;45&#8209;67</span>
                         </li>
                         <li>
-                            <nobr>Пн&ndash;Пт</nobr>, <nobr>10:00&ndash;19:00</nobr>
+                            <span class="whitespace-nowrap">Пн&ndash;Пт</span>, <span
+                                class="whitespace-nowrap">10:00&ndash;19:00</span>
                         </li>
                     </ul>
                 </div>
@@ -990,8 +1001,37 @@
     <div id="imageModal" class="fixed inset-0 z-50 flex items-center justify-center
             bg-black/80 opacity-0 pointer-events-none transition">
 
-        <img id="modalImage" src="" alt="" class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl
-              scale-95 transition-transform duration-300" />
+        <img id="modalImage" alt=""
+            class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl scale-95 transition-transform duration-300" />
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 z-50 flex items-center justify-center
+            bg-black/50 opacity-0 pointer-events-none
+            transition-opacity duration-300">
+
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4
+              text-center shadow-xl
+              transform scale-95 transition-transform duration-300">
+
+            <h3 class="text-2xl font-semibold text-textMain">
+                Заявка отправлена 🎉
+            </h3>
+
+            <p class="mt-4 text-graySoft leading-relaxed">
+                Спасибо! Мы&nbsp;получили вашу заявку и&nbsp;в&nbsp;ближайшее время
+                свяжемся с&nbsp;вами для консультации.
+            </p>
+
+            <button id="closeSuccessModal" class="mt-6 bg-primary text-white
+                   px-6 py-2.5 rounded-lg
+                   text-sm font-semibold
+                   transition-all duration-300
+                   hover:bg-primaryDark">
+                Закрыть
+            </button>
+
+        </div>
     </div>
 
     <script src="assets/js/smooth-scroll.js"></script>

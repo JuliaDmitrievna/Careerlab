@@ -1,9 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    if (window.location.hash) {
-        history.replaceState(null, '', window.location.pathname);
+    // при загрузке страницы
+    window.addEventListener('load', () => {
+        if (window.location.hash) {
+            return;
+        }
         window.scrollTo(0, 0);
-    }
+    });
 
     function smoothScrollTo(targetY, duration = 900) {
         const startY = window.pageYOffset;
