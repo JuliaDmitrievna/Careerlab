@@ -95,3 +95,43 @@
 .faq-item.is-open .faq-arrow svg {
     transform: rotate(180deg);
 }
+
+
+/* GLOBAL FIXES */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+}
+
+
+/* MOBILE MENU (BURGER) */
+#mobileMenu {
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+#mobileMenu.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#mobileMenu a {
+    transition: color 0.25s ease;
+}
+
+#mobileMenu a:hover {
+    color: var(--tw-color-primary);
+}
+
+/* PROMO BAR */
+#promoBar {
+    overflow-x: hidden;
+}

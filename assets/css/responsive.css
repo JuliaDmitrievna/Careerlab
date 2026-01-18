@@ -1,0 +1,203 @@
+/* ================================================= */
+/* 📱 GLOBAL MOBILE SAFETY                           */
+/* ================================================= */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* ================================================= */
+/* 📱 SMALL PHONES — iPhone SE (≤374px)              */
+/* ================================================= */
+@media (max-width: 374px) {
+
+  h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.45rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  /* ================= PRICING ================= */
+  #pricing {
+    overflow-x: hidden;
+  }
+
+  #pricing .pricing-track {
+    position: relative;
+    height: auto;
+    perspective: none;
+  }
+
+  #pricing .pricing-card {
+    position: relative;
+    width: 92vw;
+    max-width: 300px;
+    margin: 0 auto;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  #pricing .pricing-card:not(.is-active) {
+    display: none;
+  }
+
+  /* ================= NEWSLETTER ================= */
+  .mt-4.flex.gap-3 {
+    flex-direction: column;
+  }
+
+  .mt-4.flex.gap-3 input,
+  .mt-4.flex.gap-3 button {
+    width: 100%;
+  }
+}
+
+
+/* ================================================= */
+/* 📱 MOBILE — 375px–639px                           */
+/* ================================================= */
+@media (min-width: 375px) and (max-width: 639px) {
+
+  section {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  button,
+  a.button {
+    min-height: 44px;
+  }
+
+  /* ================= PROMO BAR ================= */
+  #promoBar {
+    padding: 1.5rem 1rem;
+    transform: translateX(0) !important;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* ================= COURSES ================= */
+  #courses .grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ================= PRICING ================= */
+  #pricing {
+    overflow-x: hidden;
+  }
+
+  #pricing .pricing-track {
+    position: relative;
+    height: auto;
+    perspective: none;
+  }
+
+  #pricing .pricing-card {
+    position: relative;
+    width: 90vw;
+    max-width: 320px;
+    margin: 0 auto;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  #pricing .pricing-card:not(.is-active) {
+    display: none;
+  }
+
+  /* ================= NEWSLETTER ================= */
+  .mt-4.flex.gap-3 {
+    flex-direction: column;
+  }
+
+  .mt-4.flex.gap-3 input,
+  .mt-4.flex.gap-3 button {
+    width: 100%;
+  }
+
+  /* ================= REVIEWS ================= */
+  #reviews img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* ================= CONTACTS ================= */
+  #contacts form {
+    padding: 1.5rem;
+  }
+
+  footer .grid {
+    gap: 2rem;
+  }
+}
+
+
+/* ================================================= */
+/* 📱 TABLET — 640px–1023px                          */
+/* ================================================= */
+@media (min-width: 640px) and (max-width: 1023px) {
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  #promoBar {
+    padding: 2rem;
+  }
+
+  #courses .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* TABLET — оставляем 3D */
+  #pricing .pricing-track {
+    height: 500px;
+  }
+
+  #pricing .pricing-card {
+    width: 340px;
+  }
+
+  #reviews img {
+    width: 96px;
+    height: 96px;
+  }
+
+  #contacts .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ================================================= */
+/* 💻 DESKTOP — от 1024px                            */
+/* ================================================= */
+@media (min-width: 1024px) {
+
+  section {
+    scroll-margin-top: 80px;
+  }
+}

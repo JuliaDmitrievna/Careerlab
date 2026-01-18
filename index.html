@@ -9,6 +9,7 @@
     <!-- Custom styles -->
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -57,15 +58,16 @@
     </button>
 
     <!-- Header -->
-    <header class="w-full bg-white">
-        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <header class="w-full bg-white relative z-50 overflow-x-hidden"></header>
+    <header class="w-full bg-white relative z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 h-20">
 
             <!-- Логотип -->
             <div class="flex items-center">
                 <img src="assets/images/logo.png" alt="CAREERLAB" class="h-14 w-auto">
             </div>
 
-            <!-- Навигация -->
+            <!-- Навигация (desktop) -->
             <nav class="hidden md:flex gap-8 text-sm font-medium text-dark">
                 <a href="#about" class="hover:text-primary">О&nbsp;нас</a>
                 <a href="#courses" class="hover:text-primary">Курсы</a>
@@ -73,13 +75,38 @@
                 <a href="#contacts" class="hover:text-primary">Контакты</a>
             </nav>
 
-            <!-- Авторизация -->
-            <div>
-                <a href="login.html" class="text-sm font-semibold text-primary hover:underline">
+            <!-- Правая часть -->
+            <div class="flex items-center gap-4 h-full">
+
+                <!-- Авторизация (desktop) -->
+                <a href="login.html" class="hidden md:inline-block text-sm font-semibold text-primary hover:underline">
                     Авторизация →
                 </a>
-            </div>
 
+                <!-- Бургер (mobile) -->
+                <button id="burgerButton" class="md:hidden flex flex-col justify-center items-center w-7 h-7 gap-[5px]"
+                    aria-label="Открыть меню">
+                    <span class="block w-6 h-[2px] bg-textMain rounded"></span>
+                    <span class="block w-6 h-[2px] bg-textMain rounded"></span>
+                    <span class="block w-6 h-[2px] bg-textMain rounded"></span>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Мобильное меню -->
+        <div id="mobileMenu" class="md:hidden absolute top-full left-0 w-full bg-white
+            border-t border-borderSoft">
+            <nav class="flex flex-col px-6 py-6 gap-4 text-sm font-medium text-textMain">
+                <a href="#about">О&nbsp;нас</a>
+                <a href="#courses">Курсы</a>
+                <a href="#pricing">Тарифы</a>
+                <a href="#contacts">Контакты</a>
+
+                <a href="login.html" class="mt-4 text-primary font-semibold">
+                    Авторизация →
+                </a>
+            </nav>
         </div>
     </header>
 
@@ -534,6 +561,15 @@
 
         </div>
     </section>
+    <div class="mt-6 flex justify-between items-center md:hidden">
+        <button onclick="prevPricingCard()" class="px-4 py-2 text-sm font-semibold text-primary">
+            ← Назад
+        </button>
+
+        <button onclick="nextPricingCard()" class="px-4 py-2 text-sm font-semibold text-primary">
+            Вперёд →
+        </button>
+    </div>
 
 
     <!-- Reviews -->

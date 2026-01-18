@@ -153,11 +153,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updatePricingClasses();
 
-    // Клик
+    // 👇 ВАЖНО: делаем функции глобальными
+    window.nextPricingCard = function () {
+        activeIndex = (activeIndex + 1) % cards.length;
+        updatePricingClasses();
+    };
+
+    window.prevPricingCard = function () {
+        activeIndex = (activeIndex - 1 + cards.length) % cards.length;
+        updatePricingClasses();
+    };
+
+    // Клик по карточке
     cards.forEach((card, index) => {
         card.addEventListener('click', () => {
             if (index === activeIndex) return;
-
             activeIndex = index;
             updatePricingClasses();
         });
@@ -290,5 +300,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
         subscribeForm.classList.add('hidden');
         subscribeSuccess.classList.remove('hidden');
+    });
+});
+
+
+
+// BURGER MENU                  
+document.addEventListener('DOMContentLoaded', () => {
+    const burgerButton = document.getElementById('burgerButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (!burgerButton || !mobileMenu) return;
+
+    // открыть / закрыть меню
+    burgerButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('is-open');
+    });
+
+    // закрытие меню при клике на ссылку
+    const menuLinks = mobileMenu.querySelectorAll('a');
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('is-open');
+        });
     });
 });
