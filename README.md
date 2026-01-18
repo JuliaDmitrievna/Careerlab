@@ -57,8 +57,8 @@
 - Отдельный файл `responsive.css` для медиазапросов
 
 ## Карта сайта (визуально)
-(assets/images/map1.png)
-(assets/images/map2.png)
+![Карта сайта — верхняя часть](assets/images/map1.png)
+![Карта сайта — нижняя часть](assets/images/map2.png)
 
 ## Публикация
 https://juliadmitrievna.github.io/Careerlab/
