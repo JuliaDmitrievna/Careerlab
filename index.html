@@ -835,25 +835,25 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
                 <!-- Форма -->
-                <form class="bg-white rounded-2xl p-8 shadow-sm space-y-6">
+                <form method="POST" action="#" class="bg-white rounded-2xl p-8 shadow-sm space-y-6">
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
                             <label class="block mb-1 text-sm font-medium text-textMain">
                                 Имя
                             </label>
-                            <input type="text" class="w-full rounded-lg border border-borderSoft px-4 py-2
-                   text-sm font-medium text-textMain
-                   focus:outline-none focus:border-primary" />
+                            <input type="text" name="firstName" required class="w-full rounded-lg border border-borderSoft px-4 py-2
+                text-sm font-medium text-textMain
+                focus:outline-none focus:border-primary" />
                         </div>
 
                         <div>
                             <label class="block mb-1 text-sm font-medium text-textMain">
                                 Фамилия
                             </label>
-                            <input type="text" class="w-full rounded-lg border border-borderSoft px-4 py-2
-                   text-sm font-medium text-textMain
-                   focus:outline-none focus:border-primary" />
+                            <input type="text" name="lastName" required class="w-full rounded-lg border border-borderSoft px-4 py-2
+                text-sm font-medium text-textMain
+                focus:outline-none focus:border-primary" />
                         </div>
                     </div>
 
@@ -861,22 +861,23 @@
                         <label class="block text-sm font-medium text-textMain">
                             Телефон
                         </label>
-                        <input id="phone" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required class="mt-2 block w-full rounded-xl
-         border border-borderSoft
-         px-4 py-3
-         text-sm
-         outline-none
-         focus:border-primary
-         focus:ring-2 focus:ring-primary/20" />
+                        <input id="phone" type="tel" name="phone" required pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+                            placeholder="+7 (___) ___-__-__" class="mt-2 block w-full rounded-xl
+            border border-borderSoft
+            px-4 py-3
+            text-sm
+            outline-none
+            focus:border-primary
+            focus:ring-2 focus:ring-primary/20" />
                     </div>
 
                     <div>
                         <label class="block mb-1 text-sm font-medium text-textMain">
                             Сообщение
                         </label>
-                        <textarea rows="4" class="w-full rounded-lg border border-borderSoft px-4 py-2
-                   text-sm font-medium text-textMain
-                   focus:outline-none focus:border-primary"></textarea>
+                        <textarea name="message" rows="4" required class="w-full rounded-lg border border-borderSoft px-4 py-2
+            text-sm font-medium text-textMain
+            focus:outline-none focus:border-primary"></textarea>
                     </div>
 
                     <button type="submit" class="w-full rounded-lg bg-primary text-white py-3
@@ -926,16 +927,18 @@
                             Анонсы курсов, карьерные советы и&nbsp;полезные материалы.
                         </p>
 
-                        <div class="mt-4 flex gap-3" id="subscribeForm">
-                            <input type="email" placeholder="Ваш&nbsp;e-mail" required class="flex-1 rounded-lg border border-borderSoft px-4 py-2
-               text-sm font-medium text-textMain
-               focus:outline-none focus:border-primary" />
-                            <button id="subscribeBtn" class="rounded-lg bg-primary px-5 py-2
-               text-sm font-semibold text-white
-               hover:opacity-90 transition">
+                        <form class="mt-4 flex gap-3" id="subscribeForm" method="POST" action="#">
+                            <input type="email" name="email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                                placeholder="Ваш e-mail" class="flex-1 rounded-lg border border-borderSoft px-4 py-2
+        text-sm font-medium text-textMain
+        focus:outline-none focus:border-primary" />
+
+                            <button type="submit" id="subscribeBtn" class="rounded-lg bg-primary px-5 py-2
+        text-sm font-semibold text-white
+        hover:opacity-90 transition">
                                 Подписаться
                             </button>
-                        </div>
+                        </form>
 
                         <p id="subscribeSuccess" class="mt-4 text-sm font-semibold text-primary hidden">
                             Вы подписаны!

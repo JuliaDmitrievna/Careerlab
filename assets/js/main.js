@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updatePricingClasses();
 
-    // 👇 ВАЖНО: делаем функции глобальными
+    // ВАЖНО: делаем функции глобальными
     window.nextPricingCard = function () {
         activeIndex = (activeIndex + 1) % cards.length;
         updatePricingClasses();
@@ -289,14 +289,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ПОДПИСКА
 document.addEventListener('DOMContentLoaded', () => {
-    const subscribeBtn = document.getElementById('subscribeBtn');
     const subscribeForm = document.getElementById('subscribeForm');
     const subscribeSuccess = document.getElementById('subscribeSuccess');
 
-    if (!subscribeBtn) return;
+    if (!subscribeForm || !subscribeSuccess) return;
 
-    subscribeBtn.addEventListener('click', (e) => {
-        e.preventDefault();
+    subscribeForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // блокируем перезагрузку
+
+        if (!subscribeForm.checkValidity()) {
+            subscribeForm.reportValidity();
+            return;
+        }
 
         subscribeForm.classList.add('hidden');
         subscribeSuccess.classList.remove('hidden');
